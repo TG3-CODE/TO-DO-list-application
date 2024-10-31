@@ -1,0 +1,116 @@
+/* Reset & basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* App container */
+  .todo-app {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Task Input */
+  .task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-input input,
+  .task-input select,
+  .task-input button {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+  
+  .task-input button {
+    background-color: #2ca830;
+    color: rgb(254, 253, 253);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-input button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Task List */
+  #taskList {
+    list-style-type: none;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Priority-based styling */
+  .task.high-priority {
+    background-color: #fbee35;
+  }
+  
+  .task.medium-priority {
+    background-color: #5efcfe;
+  }
+  
+  .task.low-priority {
+    background-color: #7afcd9;
+  }
+  
+  .task.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+
+  .task.dragging {
+    opacity: 0.5;
+  }
+  
+  .task.over {
+    border: 2px dashed #6d6c6cd8;
+  }
+
+  .task.complete {
+    background-color: purple; /* Color for completed tasks */
+    color: white; /* Adjust text color for readability */
+  }
+  
+  .task.didntDo {
+    background-color: red; /* Color for tasks not done */
+    color: white; /* Adjust text color for readability */
+  }
+  
+  .task.pending {
+    background-color: white; /* Default color for pending tasks */
+    color: black;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .task-input {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
